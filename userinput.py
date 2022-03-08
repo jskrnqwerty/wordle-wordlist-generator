@@ -108,8 +108,8 @@ def breakup_sq_inputs(sq_all_inputs):
     sq_info = []
     sq_info_lol = []
     
-    # Struture: sq_all_inputs = [sq_1_input, sq_2_input, sq_3_input, sq_4_input, sq_5_input]
-    # Struture: sq_1_input = 'ag'
+    # Structure: sq_all_inputs = [sq_1_input, sq_2_input, sq_3_input, sq_4_input, sq_5_input]
+    # Structure: sq_1_input = 'ag'
     for item in sq_all_inputs:
         '''Separate the yelow, green and grey letters.'''
 
@@ -148,7 +148,6 @@ def breakup_sq_inputs(sq_all_inputs):
 
                 if grellow_extract: return grellow_extract
                 else: return ''
-                # print(f"grellow = {grellow_extract} found at {g_spot}\n")
         except ValueError:
             print("Contradicting input received. Try again.")
             exit()

@@ -22,7 +22,7 @@ from word import WordOps
 def header():
     '''Print header on putput screen'''
 
-    print('\n\n---Wordle Helper v4grellow_extract.0---')#.center(50)
+    print('\n\n---Wordle Helper v4.3.0---')#.center(50)
     print('---Because NYT Sucks---\n')#.center(50)
 
 
@@ -45,7 +45,7 @@ def read_wordfile():
 def read_current_list_file():
     '''Read from the list of words saved from the previous while loop'''
 
-    with open('data/current_list.txt', 'r') as f: data_str = f.read()
+    with open('data/temp_current_list.txt', 'r') as f: data_str = f.read()
     data_list = convert_str_to_list(data_str)
     return data_list
 
@@ -54,7 +54,7 @@ def write_current_list_file(data):
     '''Write the current word like to file'''
 
     data_str = convert_list_to_str(data)
-    with open('data/current_list.txt', 'w') as f: f.write(data_str)
+    with open('data/temp_current_list.txt', 'w') as f: f.write(data_str)
     
 
 def convert_list_to_str(wordlist):
@@ -83,7 +83,7 @@ def condition_check(word_count, another_word, current_list):
         
     if current_list == []:
         another_word = input(f"\nInput 'q' to quit.\nHit enter to try word {word_count}\nWhat do you wanna do?: ")
-        print("I like your entusiasm.")
+        print("I like your enthusiasm.")
         print("But as you see, we're out of words to filter.")
         print("So, Bye bye!!!")
         print("See you tomorrow")
@@ -120,8 +120,9 @@ def print_output(wordlist, words_per_line=6):
             word_str += '\n'
     
     if word_str:
-        print(f'{len(wordlist)} words found.\n')
+        # print(f'{len(wordlist)} words found:\n')
         print(f'{word_str}')
+        print(f'\n{len(wordlist)} words found.\n')
     else:
         print("No matches found. You're on your own!")
     
@@ -139,7 +140,6 @@ def main():
         '''Controlled loop to check if usre needs help with another words.'''
         
         write_current_list_file(current_list)
-
 
         # INPUT BLOCK
         ##########################################################
@@ -212,12 +212,10 @@ def main():
         word_count += 1
         condition_check(word_count, another_word, current_list)
         
-
     footer()
 
 
 if __name__ == '__main__': main()
-
 
 
     #     # MANUAL INPUT BLOCK

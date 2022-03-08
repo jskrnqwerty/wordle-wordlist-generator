@@ -1,1 +1,3 @@
-__pucache__/
+__pycache__/
+screens/
+try.py

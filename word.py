@@ -99,8 +99,6 @@ class WordOps:
         
         words_wo_grellows = []
 
-        print("This is filter_out_grellow() function.")
-        # if self._grellow != '':
         grellow_letter = self._grellow[0]
         grellow_index = int(self._grellow[1]) - 1
 
