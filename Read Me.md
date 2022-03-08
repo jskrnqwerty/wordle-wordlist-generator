@@ -17,14 +17,14 @@ About the program:
 - Wordle_Helper_v4.3.py file executes the program.
 - After trying the first 5-letter word on you own, enter the output into the command line after execution.
 - Instructions for inputting word in command line are as follows:
-    You enter each letter one at a time.
-    Input is not case sensitive.
-    Each letter's colour is to be indicated by adding a designated suffix.
-        for Green  -> 'g'
-        for Yellow -> 'y'
-        for Grey   -> ''
-        For 'H' in GREEN square : hg
-        For 'E' in YELLOW square: ey
-        For 'L' in GREY square  : l
-        For 'L' in GREEN square : lg
-        for 'O' in GREY square  : o
+   - You enter each letter one at a time.
+   - Input is not case sensitive.
+   - Each letter's colour is to be indicated by adding a designated suffix.
+       - for Green  -> 'g'
+       - for Yellow -> 'y'
+       - for Grey   -> ''
+       - For 'H' in GREEN square : hg
+       - For 'E' in YELLOW square: ey
+       - For 'L' in GREY square  : l
+       - For 'L' in GREEN square : lg
+       - for 'O' in GREY square  : o
